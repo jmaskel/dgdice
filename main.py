@@ -6,11 +6,7 @@ def draw():
     pass
 
 
-def place():
-    pass
-
-
-def roll():
+def dice_roll():
     blue = random.randint(1, 6)
     red = random.randint(1, 6)
     green = random.randint(1, 6)
@@ -24,23 +20,29 @@ def roll():
     print('Yellow: ' + str(yellow))
 
 
-def score():
+def main():
+    # time.sleep(1)
+    print('Hello there.')
+    # time.sleep(2)
+    print('Would you like to play Disc Golf Dice?')
+
+    yn = str(input('Y/N: '))
+
+    if yn == 'n' or yn == 'N':
+        print('Ok. Your loss! See ya.')
+    elif yn == 'y' or yn == 'Y':
+        dice_roll()
+    else:
+        print('Try typing "y or n"')
+        main()
+
+
+def place():
     pass
 
 
-def main():
-    time.sleep(1)
-    print('Hello there.')
-    time.sleep(2)
-    print('Would you like to play Disc Golf Dice?')
-    yn = str(input('Y/N: '))
-
-    if yn == 'y' or 'Y':
-        roll()
-    elif yn == 'n' or 'N':
-        print('Ok. Your loss! See ya.')
-    else:
-        print('Try typing "y or n"')
+def score():
+    pass
 
 
 if __name__ == '__main__':
